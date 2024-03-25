@@ -1,0 +1,287 @@
+/*General */
+
+
+
+/*arrumar tamanho da imagem especifica no image-container(show)
+arrumar a data especifica nos cards no welcome*/
+*{
+    font-family: "Roboto";
+}
+h1{
+    color: rgb(12, 12, 12);
+}
+
+.msg{
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+/*navbar*/
+#navbar img{
+    width: 40px;
+}
+
+#navbar{
+    justify-content: space-between;
+    background-color: #FFF;
+    padding: 5px 0 ;
+}
+
+#navbar a{
+  font-size: 16px;
+  color: #757575;   
+}
+#navbar a:hover{
+    color: #F2A340;   
+  }
+  
+/* Search Container */
+#search-container{
+    background-image: url("/img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 50px;
+    text-align: center;
+}
+
+#search-container h1{
+    color: #F2A340;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+/* Events List */
+#events-container{
+    padding: 50px;
+}
+
+#events-container h2{
+    margin-bottom: 10px;
+}
+
+#events-container .subtitle{
+    color:#757575;
+    margin-bottom: 30px;
+
+}
+
+#cards-container{
+    display: flex;
+    flex-wrap: wrap; /* Para permitir que os cards sejam exibidos em várias linhas, se necessário */
+    justify-content: space-between; /* Distribui os cards uniformemente ao longo do container */
+    
+}
+
+
+#events-container .card {
+    position: relative;
+    flex: 1 1 24%;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: .5%;
+    overflow: hidden; /* Oculta qualquer conteúdo que extrapole os limites do card */
+    
+}
+
+#events-container img{
+    
+    height: 150px; /* Permite que a altura da imagem seja ajustada automaticamente, mantendo a proporção original */
+    display: block; /* Remove espaços em branco abaixo das imagens */
+    object-fit: cover; /* Redimensiona a imagem para caber dentro do container mantendo a proporção */
+    object-position: center;
+    
+    border-top-right-radius:10px;
+    border-top-left-radius: 10px;
+}
+.card .card-date{
+    font-size: 14px;
+    color: #000000;
+}
+.card .card-title{
+    color: #212121;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.card-participantes{
+    font-size: 14px;
+    color: #757575;
+}
+
+
+
+
+body{
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+header{
+    background-color: #FFF;
+    border-bottom: 1px solid #CCC;
+
+}
+.row{
+    margin: 0;
+}
+.container-fluid{
+    padding: 0;
+}
+
+.btn-primary{
+    background-color: #F2A340;
+    border: 2px solid #c28008;
+}
+.btn-primary:hover{
+    background-color: #c28008;
+    border-color:#c28008;
+}
+
+#description-container{
+    margin-top: 30px;
+
+}
+/*Dashboard*/
+
+.dashboard-title-container{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-events-container th{
+    width: 25%;
+}
+.dashboard-events-container form{
+    display: inline-block;
+
+}
+
+/* Footer */
+footer{
+    text-align: center;
+    background-color: #353e48;
+    color: #FFF;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 375px) {
+    #events-container .card {
+        flex: 0 0 calc(50% - 10px); /* Alterando para duas colunas */
+        max-width: calc(50% - 10px);
+    }
+}
+@media only screen and (max-width: 768px) {
+    #events-container .card {
+        flex: 0 0 calc(33.333% - 10px); /* Alterando para três colunas */
+        max-width: calc(33.333% - 10px);
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #events-container .card {
+        flex: 0 0 calc(50% - 10px); /* Alterando para duas colunas */
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #events-container .card {
+        flex: 0 0 calc(100% - 10px); /* Alterando para uma coluna */
+        max-width: calc(100% - 10px);
+    }
+}
+
+
+/* Pagina de criação de eventos:*/
+
+#event-create-container{
+    padding: 30px;   
+}
+
+#event-create-container{
+    font-weight: bold;
+}
+
+#event-create-container input, select, textarea{
+
+font-size: 12px;
+
+}
+
+.form-group-check {
+    display: inline-block;
+    margin-right: 20px; /* Espaçamento entre os checkboxes */
+}
+
+
+/*Event page*/
+#image-container,
+#info-container{
+    margin-top: 30px;
+}
+
+#image-container img{
+    border-radius: 10px;
+    
+}
+
+#info-container h1{
+    font-size: 36px;
+    font-weight: 900;
+}
+
+#info-container p{
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+
+}
+
+#info-container h3,
+#description-container h3{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+#info-container ion-icon{
+    font-size: 20px;
+    color: #F2A340;
+    margin-right: 5px;
+}
+
+#info-container #event-submit{
+    margin: 20px 0;
+}
+
+
+#items-list{
+    list-style: none;
+    padding-left: 0;
+
+}
+
+#items-list li{
+    display: flex;
+}
