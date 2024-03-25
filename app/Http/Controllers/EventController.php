@@ -100,7 +100,7 @@ class EventController extends Controller
         /* se quisesse event poderia ser"eventos". é a chave da variavel $event(que esta no banco de dados e contem todas as informações sobre o evento)
         logo, quando irei para view, para usar a variavel $event e mostrar na view, terei de chamar por
         "$eventos" visto que teria passado a chave "eventos" para a variavel $events
-        */
+        *ppp*/
 
 
     }
