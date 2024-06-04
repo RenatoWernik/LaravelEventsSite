@@ -170,6 +170,13 @@ header{
 
 }
 
+
+/*Edit page*/
+.img-preview{
+    width: 100px;
+    margin-top: 20px;
+}
+
 /* Footer */
 footer{
     text-align: center;
@@ -284,4 +291,14 @@ font-size: 12px;
 
 #items-list li{
     display: flex;
+}
+
+
+#info-container .already-joined-msg{
+    margin: 15px 0;
+    color:#004085;
+    background-color:#cce5ff;
+    border: 1px solid #b8daff;
+    padding: 10px;
+    width: 275px;
 }

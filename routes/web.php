@@ -18,11 +18,13 @@ Route::get('/', [EventController::class, "index"]); //index é o padrao que most
 Route::get('/events/create', [EventController::class, "create"])->middleware("auth");//create é padrao que cria registros no banco
 Route::get('/contact', [EventController::class, "contact"]);
 Route::post("/events", [EventController::class, "store"]); /* store envia e salva os dados no banco// vai jogar toda a logica de adição de novos dados(post) para a classe store, que foi criada no EventController*/
-Route::delete('/events/{id}', [EventController::class, 'destroy'])->name('events.destroy');
+Route::delete('/events/{id}', [EventController::class, 'destroy'])->name('events.destroy')->middleware("auth");
 Route::get("/events/{id}", [EventController::class, "show"]);// show é o padrao que mostra um dado em especifico{id}
 Route::get("/dashboard", [EventController::class, "dashboard"])->middleware("auth");
-
-
+Route::get("/events/edit/{id}",[EventController::class, "edit"])->middleware("auth");
+Route::put("/events/update/{id}" , [EventController::class, "update"])->middleware("auth");
+Route::post("/events/join/{id}", [EventController::class, "joinEvent"])->middleware("auth");
+Route::delete("/events/leave/{id}", [EventController::class, "leaveEvent"])->middleware("auth");
 
 Route::get('/produtos', function () {
     $busca = request("search");
